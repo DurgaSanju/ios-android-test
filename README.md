@@ -2,6 +2,7 @@
 
 ### Usage
   - Listed all soccer games for one season from API http://api.football-data.org/alpha/soccerseasons/398/fixtures
+  - App Works in offline - data are stored in database
 
 ### Dependencies
 ```sh
