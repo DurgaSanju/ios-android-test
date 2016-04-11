@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * List Adapter to set values in list
+ * Adapter to set values in list
  */
 public class FixtureAdapter extends BaseAdapter {
 
@@ -78,8 +78,8 @@ public class FixtureAdapter extends BaseAdapter {
             holder.homeTeam.setText(myFixtures.get(position).getHomeTeamName());
             holder.awayTeam.setText(myFixtures.get(position).getAwayTeamName());
             holder.status.setText(myFixtures.get(position).getStatus());
-            holder.homeTeamGoals.setText("1");
-            holder.awayTeamGoals.setText("0");
+            holder.homeTeamGoals.setText(myFixtures.get(position).getResult().getGoalsHomeTeam());
+            holder.awayTeamGoals.setText(myFixtures.get(position).getResult().getGoalsAwayTeam());
             holder.dateTime.setText(getDate(myFixtures.get(position).getDate()));
         }
         return vi;

@@ -1,15 +1,24 @@
 package com.user.soccerapp.model;
 
-import java.lang.reflect.Array;
+import com.google.gson.annotations.Expose;
+
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Soccer model class
  */
 public class Soccer {
 
+    public ArrayList<Fixtures> getFixtures() {
+        return fixtures;
+    }
+
+    public void setFixtures(ArrayList<Fixtures> fixtures) {
+        this.fixtures = fixtures;
+    }
+
     public ArrayList<Fixtures> fixtures;
+
 
     public static class Fixtures {
         //Variables that are in our json
@@ -17,33 +26,6 @@ public class Soccer {
         private String status;
         private String homeTeamName;
         private String awayTeamName;
-        private int goalsHomeTeam;
-        private int goalsAwayTeam;
-        public Array result;
-
-        public Array getResult() {
-            return result;
-        }
-
-        public void setResult(Array result) {
-            this.result = result;
-        }
-
-        public int getGoalsHomeTeam() {
-            return goalsHomeTeam;
-        }
-
-        public void setGoalsHomeTeam(int goalsHomeTeam) {
-            this.goalsHomeTeam = goalsHomeTeam;
-        }
-
-        public int getGoalsAwayTeam() {
-            return goalsAwayTeam;
-        }
-
-        public void setGoalsAwayTeam(int goalsAwayTeam) {
-            this.goalsAwayTeam = goalsAwayTeam;
-        }
 
         public String getDate() {
             return date;
@@ -75,6 +57,41 @@ public class Soccer {
 
         public void setAwayTeamName(String awayTeamName) {
             this.awayTeamName = awayTeamName;
+        }
+
+        @Expose
+        private Result result;
+
+        public Result getResult() {
+            return result;
+        }
+
+        public void setResult(Result result) {
+            this.result = result;
+        }
+
+        public static class Result {
+
+            public void setGoalsHomeTeam(String goalsHomeTeam) {
+                this.goalsHomeTeam = goalsHomeTeam;
+            }
+
+            public void setGoalsAwayTeam(String goalsAwayTeam) {
+                this.goalsAwayTeam = goalsAwayTeam;
+            }
+
+            @Expose
+            private String goalsHomeTeam;
+            @Expose
+            private String goalsAwayTeam;
+
+            public String getGoalsHomeTeam() {
+                return this.goalsHomeTeam;
+            }
+
+            public String getGoalsAwayTeam() {
+                return this.goalsAwayTeam;
+            }
         }
     }
 
