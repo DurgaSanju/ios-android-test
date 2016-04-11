@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Soccer</string>
+
+    <!--Splash Activity-->
+    <string name="splash_title">SOCCER GAMES!!!</string>
+
+    <!--Main Activity-->
+    <string name="title_home_team">Home Team</string>
+    <string name="title_away_team">Away Team</string>
+    <string name="title_status_team">Status</string>
+    <string name="title_goals_home_team">Home Team Goals</string>
+    <string name="title_goals_away_team">Away Team Goals</string>
+    <string name="title_date_team">Date</string>
+
+</resources>
